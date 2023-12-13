@@ -79,13 +79,13 @@ public class Scanner {
                 addToken(match('=') ? GREATER_EQUAL : GREATER);
                 break;
             case '/':
-                if (match('/')) {
-                    // A comment goes until the end of the line.
+                // A comment goes until the end of the line.
+                if (match('/'))
                     while (peek() != '\n' && !isAtEnd())
                         advance();
-                } else {
+                else
                     addToken(SLASH);
-                }
+
                 break;
             case ' ':
             case '\r':
