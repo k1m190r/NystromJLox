@@ -101,18 +101,18 @@ public class Scanner {
                 string();
                 break;
             case 'o':
-                if (match('r')) {
+                if (match('r'))
                     addToken(OR);
-                }
+
                 break;
             default:
-                if (isDigit(c)) {
+                if (isDigit(c))
                     number();
-                } else if (isAlpha(c)) {
+                else if (isAlpha(c))
                     identifier();
-                } else {
+                else
                     Lox.error(line, "Unexpected character.");
-                }
+
                 break;
         }
     }
